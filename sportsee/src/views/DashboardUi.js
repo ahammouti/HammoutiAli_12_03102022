@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header/Header'
+import VerticalLayout from '../components/VerticalLayout/VerticalLayout'
 
 /**
  * @component
@@ -7,7 +8,13 @@ import Header from '../components/Header/Header'
  */
 const DashboardUi = () => {
     return (
-        <Header />
+        <>
+            <Header />
+            <div className="containerBarAndMain">
+                <VerticalLayout />
+
+            </div>
+        </>
     )
 }
 

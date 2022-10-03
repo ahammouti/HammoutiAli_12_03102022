@@ -1,0 +1,39 @@
+.verticalLayout {
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    grid-area: verticalBar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 100px;
+    z-index: -1;
+    min-height: 100%;
+    width: 110px;
+
+    &__listBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        padding-top: 20px;
+        padding-top: 70px;
+    }
+
+    &__copiryght {
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        z-index: 5;
+        padding-top: 70px;
+
+        p {
+            font-weight: 500;
+            font-size: 13px;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+        }
+    }
+}

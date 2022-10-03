@@ -1,15 +1,13 @@
 .header {
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    padding: 20px 30px;
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     color: #f1f1f1;
     background: #020203;
     column-gap: 200px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
 
     &__logo {
         display: flex;
@@ -24,13 +22,13 @@
         display: flex;
         flex: 0.9;
         margin-right: 50px;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         font-size: 1.5rem;
 
         ul {
             width: 100%;
             display: flex;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             column-gap: 20px;

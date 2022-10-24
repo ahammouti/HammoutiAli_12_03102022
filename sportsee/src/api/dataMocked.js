@@ -2,7 +2,7 @@ const USER_MAIN_DATA = [
     {
         id: 12,
         userInfos: {
-            firstName: 'Karl',
+            firstName: 'Karlito',
             lastName: 'Dovineau',
             age: 31,
         },
@@ -264,8 +264,7 @@ const USER_PERFORMANCE = [
 
 
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
+export {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,

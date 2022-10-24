@@ -1,17 +1,16 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import DashboardUi from "./views/DashboardUi";
 import "./styles/style.scss";
+import Error404Ui from "./views/Error404Ui/Error404Ui";
 
 const App = () => {
-
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route element={<DashboardUi />} path="/" />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Routes>
+        <Route element={<DashboardUi />} path="/user/:id" />
+        <Route element={<Error404Ui />} path="/user/error" />
+      </Routes>
+    </div>
   );
 }
 

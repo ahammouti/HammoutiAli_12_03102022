@@ -1,6 +1,14 @@
+.dashbo {
+    overflow: hidden;
+    min-height: 100%;
+    // background: #000;
+}
+
 .containerBarAndMain {
+    // background: rgb(246, 212, 212);
+    min-height: 100%;
     display: grid;
-    height: calc(100vh - 81.68px);
+    // height: calc(100vh - 81.68px);
     grid-template-columns: 100px 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;

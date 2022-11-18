@@ -1,55 +1,8 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-
 import React from 'react'
-
-const data = [
-  {
-    name: "Page A",
-    uv: 74,
-    pv: 2400,
-    amt: 2400
-  },
-  {
-    name: "Page B",
-    uv: 80,
-    pv: 1398,
-    amt: 2210
-  },
-  {
-    name: "Page C",
-    uv: 82,
-    pv: 9800,
-    amt: 2290
-  },
-  {
-    name: "Page D",
-    uv: 78,
-    pv: 3908,
-    amt: 2000
-  },
-  {
-    name: "Page E",
-    uv: 80,
-    pv: 4800,
-    amt: 2181
-  },
-  {
-    name: "Page F",
-    uv: 75,
-    pv: 3800,
-    amt: 2500
-  },
-  {
-    name: "Page G",
-    uv: 81,
-    pv: 4300,
-    amt: 2100
-  }
-];
+import CustomTooltip from "./CustomTooltip";
 
 const BarChartComponent = ({ activity }) => {
-
-  // activity !== undefined && const act = activity.data.sessions
   return (
     <section className="barchart">
       <div className="barchart__head">
@@ -60,11 +13,11 @@ const BarChartComponent = ({ activity }) => {
         </ul>
       </div>
       <div className="barchart__graph">
-        {console.log(activity !== undefined && activity.data.sessions)}
+        {/* {console.log(activity !== undefined && activity.sessions)} */}
         <ResponsiveContainer height={(100 * 100) / 40} width="100%">
           <BarChart
             // data={data}
-            data={activity !== undefined && activity.data.sessions}
+            data={activity !== undefined && (activity.sessions || activity.data.sessions)}
             barGap={8}
             height="75%"
             width="100%"
@@ -76,7 +29,7 @@ const BarChartComponent = ({ activity }) => {
             }}
           >
             <CartesianGrid style={{ padding: 0, right: 0 }} vertical={false} strokeDasharray={"1"} />
-            <XAxis tickLine={false} tickMargin={15} dataKey="day" />
+            <XAxis tickMargin={15} tickLine={false} axisLine={{ stroke: '#DEDEDE' }} tick={{ fill: '#9B9EAC', fontSize: '14px' }} dataKey="day" />
             <YAxis
               dataKey="kilogram"
               domain={['dataMin-2', 'dataMax+1']}
@@ -87,9 +40,9 @@ const BarChartComponent = ({ activity }) => {
               style={{ marginLeft: '20px' }}
               dx={40}
               scale="auto" orientation="right" />
-            <YAxis yAxisId="calories" dataKey="calories" hide={false} />
+            <YAxis yAxisId="calories" dataKey="calories" hide={true} />
 
-            <Tooltip />
+            <Tooltip cursor={{ background: '#C4C4C4', opacity: 0.5 }} content={<CustomTooltip />} />
             {/* <Legend /> */}
             <Bar radius={[50, 50, 0, 0]} barSize={8} dataKey="calories" yAxisId="calories" fill="#E60000" />
             <Bar radius={[50, 50, 0, 0]} barSize={8} dataKey="kilogram" fill="#282D30" />

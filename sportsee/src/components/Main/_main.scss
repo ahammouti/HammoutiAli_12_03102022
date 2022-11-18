@@ -3,6 +3,12 @@
     margin-top: 81.68px;
     padding: 70px 101px;
 
+    @media screen and (max-width: 1180px) {
+        flex-direction: column-reverse;
+        row-gap: 110px;
+        padding: 70px 50px;
+    }
+
     &__welcome {
         padding-bottom: 77px;
     }
@@ -26,12 +32,45 @@
 
         &-left {
             height: 100%;
-            width: 80%;
+            width: 90%;
+
+            .graphicSection {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 35px;
+                width: 100%;
+                height: 100%;
+                margin-top: 100px;
+            }
+
+            @media screen and (max-width: 1180px) {
+                width: 100%;
+            }
+
+            .barchart__graph {
+                @media screen and (max-width: 1180px) {
+                    width: 100%;
+                    min-width: 100%;
+                }
+            }
         }
 
         &-right {
-            width: 27%;
-            background: #444;
+            width: 10%;
+            display: flex;
+            flex-flow: column wrap;
+            row-gap: 120px;
+
+            @media screen and (max-width: 1180px) {
+                width: 100%;
+                column-gap: 80px;
+                flex-direction: row;
+            }
+        }
+
+        @media screen and (max-width: 1180px) {
+            flex-direction: column-reverse;
+            row-gap: 110px;
         }
     }
 }

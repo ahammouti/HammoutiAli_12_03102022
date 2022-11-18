@@ -24,7 +24,7 @@ const VerticalLayout = () => {
                 </li>
             </ul>
             <div className="verticalLayout__copiryght">
-                <p>Copiryght, SportSee 2020</p>
+                <p>Copyright, SportSee 2020</p>
             </div>
         </div>
     )

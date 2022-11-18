@@ -1,0 +1,22 @@
+.statisticCard {
+    // background: rgb(223, 189, 189);
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+    }
+
+    &__value {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        font-weight: 600;
+
+        span {
+            color: #74798C;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+    }
+}

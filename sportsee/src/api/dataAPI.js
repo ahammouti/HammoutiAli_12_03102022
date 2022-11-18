@@ -36,7 +36,21 @@ const getUserActivity = (id) => {
     return handleCheckUrl(url, baseUrlMocked);
 }
 
+const getAverageSession = (id) => {
+    const url = `${process.env.REACT_APP_BASE_URL + `/${id}/average-sessions`}`
+    const baseUrlMocked = `../../data/${id}/USER_AVERAGE_SESSIONS.json`;
+    return handleCheckUrl(url, baseUrlMocked);
+}
+
+const getPerformance = (id) => {
+    const url = `${process.env.REACT_APP_BASE_URL + `/${id}/performance`}`
+    const baseUrlMocked = `../../data/${id}/USER_PERFORMANCE.json`;
+    return handleCheckUrl(url, baseUrlMocked);
+}
+
 export {
     getUserInfos,
-    getUserActivity
+    getUserActivity,
+    getAverageSession,
+    getPerformance
 }

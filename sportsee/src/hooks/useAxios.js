@@ -34,6 +34,7 @@ const useAxios = (configObj) => {
 
         // useEffect cleanup function
         return () => controller.abort();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return [response, error, loading]

@@ -5,7 +5,12 @@ import LineChartComponent from '../LineChart/LineChartComponent.js';
 import BarChartComponent from '../BarChart/BarChartComponent.js';
 import StatisticsUserInfo from '../StatisticsUserInfo/StatisticsUserInfo.js';
 import RadarChartComponent from '../RadarChart/RadarChartComponent.js';
+import PieChartComponent from '../PieChart/PieChartComponent.js';
 
+/**
+ * @component Main
+ * @returns {JSX Element} Main component with all graph components calls, and the different data of states passed in props.
+ */
 const Main = () => {
     const [datas, setDatas] = useState();
     const [dataActivity, setDataActivity] = useState();
@@ -26,7 +31,7 @@ const Main = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
-    // console.log("state", datas !== undefined && dataAverageSessions)
+    // console.log("state", datas !== undefined && (datas.todayScore || datas.score))
 
     return (
         <div className='main'>
@@ -40,7 +45,7 @@ const Main = () => {
                     <div className="graphicSection">
                         <LineChartComponent averageSessions={dataAverageSessions} />
                         <RadarChartComponent performance={dataPerformance} />
-                        {/* <RadarChartComponent /> */}
+                        <PieChartComponent score={datas !== undefined && (datas.todayScore || datas.score)} />
                     </div>
                 </div>
                 <div className="main__statistics-right">
@@ -54,4 +59,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Main;

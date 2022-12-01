@@ -8,8 +8,8 @@ const VerticalBarIcons = ({ path, alt }) => {
 }
 
 VerticalBarIcons.propTypes = {
-    path: PropTypes.node.isRequired,
-    alt: PropTypes.node.isRequired
+    path: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired
 }
 
 export default VerticalBarIcons

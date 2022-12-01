@@ -37,6 +37,12 @@
             .graphicSection {
                 display: flex;
                 flex-wrap: wrap;
+
+                @media screen and (max-width: 880px) {
+                    justify-content: center;
+                }
+
+                row-gap: 35px;
                 column-gap: 35px;
                 width: 100%;
                 height: 100%;
@@ -60,6 +66,7 @@
             display: flex;
             flex-flow: column wrap;
             row-gap: 120px;
+            justify-content: center;
 
             @media screen and (max-width: 1180px) {
                 width: 100%;

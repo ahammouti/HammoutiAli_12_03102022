@@ -1,0 +1,48 @@
+.custom-legend-score {
+    &-score {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+    }
+
+    &-objectif {
+        text-align: center;
+        margin-top: 5px;
+        color: rgba(116, 121, 140, 1);
+    }
+}
+
+.scoreWrap {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 300px;
+
+    h3 {
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        left: 20px;
+        bottom: 0px;
+    }
+
+    .recharts-legend-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50% !important;
+        transform: translate(-50%, -38%);
+        text-align: center;
+        width: 120px !important;
+        height: 120px !important;
+        border: none;
+        border-radius: 50%;
+        line-height: 25px;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 15px;
+    }
+}
+
+.score-radial {
+    background-color: rgb(119, 41, 41);
+}

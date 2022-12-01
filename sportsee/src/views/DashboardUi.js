@@ -4,8 +4,8 @@ import Main from '../components/Main/Main'
 import VerticalLayout from '../components/VerticalLayout/VerticalLayout'
 
 /**
- * @component
- * @returns 
+ * @component DashboardUi
+ * @returns {JSX} DashboardUi component
  */
 const DashboardUi = () => {
     return (
@@ -18,5 +18,4 @@ const DashboardUi = () => {
         </div>
     )
 }
-
 export default DashboardUi

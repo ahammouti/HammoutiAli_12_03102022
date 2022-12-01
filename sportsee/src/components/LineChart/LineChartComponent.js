@@ -1,15 +1,13 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, } from 'recharts';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-/**show chart session duration
- * 
- * @param {Object} props 
- * @param {Array} props.dataSessions 
- * @returns {JSX} 
+/**
+ * @component
+ * @param {props} averageSessions json data of average session
+ * @returns {jsxElement} Barchart component with activity session data
  */
 const LineChartComponent = ({ averageSessions }) => {
-    // const averageSession = averageS;
     // console.log(averageSessions !== undefined && averageSessions.data.sessions)
     const dayTab = {
         1: 'L',
@@ -81,12 +79,9 @@ const LineChartComponent = ({ averageSessions }) => {
             </div>
         )
     }
-
-
 }
 
 LineChartComponent.propTypes = {
-    dataSessions: propTypes.array,
+    averageSessions: PropTypes.object,
 };
-
 export default LineChartComponent;

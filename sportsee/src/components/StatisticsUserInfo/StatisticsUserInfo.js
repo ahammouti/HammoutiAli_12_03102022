@@ -3,7 +3,14 @@ import calorieIcon from '../../assets/icons/fire.svg'
 import proteinIcon from '../../assets/icons/chicken.svg'
 import appleIcon from '../../assets/icons/apple.svg'
 import burgerIcon from '../../assets/icons/burger.svg'
+import PropTypes from 'prop-types';
 
+/**
+ * @component
+ * @param {props} value value data of type statistic
+ * @param {props} type type of statistics data
+ * @returns {jsxElement} Statistics User info component with correct data 
+ */
 const StatisticsUserInfo = ({ value, type }) => {
     return (
         <div className='statisticCard'>
@@ -46,24 +53,10 @@ const StatisticsUserInfo = ({ value, type }) => {
             }
         </div>
     )
-
-    // if (type === "calorieCount") {
-    //     return (
-    //         <div className='statisticCard'>
-    //             <h1>Calorie : {value}</h1>
-    //         </div>
-    //     )
-    // }
-    // if (type === "proteinCount") {
-    //     return (
-    //         <div className='statisticCard'>
-    //             <h1>proteine : {value}</h1>
-    //         </div>
-    //     )
-    // }
 }
-export default StatisticsUserInfo
-// {
-//     type === "proteinCount" &&
-//     <h1>proteine : {type}</h1>
-// }
+
+StatisticsUserInfo.propTypes = {
+    type: PropTypes.string.isRequired,
+    value: PropTypes.any,
+};
+export default StatisticsUserInfo;
